@@ -1,37 +1,73 @@
 package albciff.mainadaquiz;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
+
+import com.squareup.picasso.Picasso;
+
+import java.io.UnsupportedEncodingException;
+import java.util.List;
+
+import albciff.mainadaquiz.json.Answer;
+import albciff.mainadaquiz.json.GameJSON;
+import albciff.mainadaquiz.json.JSONReader;
+import albciff.mainadaquiz.json.Level;
+import albciff.mainadaquiz.question.QuestionActivity;
 
 public class QuizLayout extends AppCompatActivity {
 
+    GameJSON game = null;
+    int currentLevel = -1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz_layout);
 
-        // sounds... aqui?
-        final MediaPlayer mpe = MediaPlayer.create(this, R.raw.error);
-        final MediaPlayer mpo = MediaPlayer.create(this, R.raw.ok);
+        JSONReader reader = new JSONReader();
+        try {
+            game = reader.readJSON(getResources().openRawResource(R.raw.game1));
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
 
-        // buttons
-        Button firstAnswer = (Button) findViewById(R.id.button1);
-        Button secondAnswer = (Button) findViewById(R.id.button2);
-        Button thirdAnswer = (Button) findViewById(R.id.button3);
+        // seguent nivell
+        startNextLevel();
+    }
 
-        // text amb les respostes
-        firstAnswer.setText("Tiranosaurio");
-        secondAnswer.setText("Carnotauro");
-        thirdAnswer.setText("Aransaurus");
+    @Override
+    protected void onRestart() {
+        super.onRestart();
 
-        // funcions associades al click del botó
-        firstAnswer.setOnClickListener(new FailClic(mpe));
-        secondAnswer.setOnClickListener(new CorrectClic(mpo));
-        thirdAnswer.setOnClickListener(new FailClic(mpe));
+        // seguent nivell
+        startNextLevel();
+
+        // TODO: Controlar si no hi ha més nivells
+    }
+
+    private void startNextLevel(){
+
+        currentLevel = currentLevel + 1;
+
+        // levels hauria de ser un bucle! men...
+        List<Level> levels = game.getLevels();
+
+        if(currentLevel >= levels.size()){
+            currentLevel = 0;
+        }
+
+        Intent myIntent = new Intent(QuizLayout.this, QuestionActivity.class);
+        myIntent.putExtra("level", levels.get(currentLevel)); //Optional parameters
+        QuizLayout.this.startActivity(myIntent);
+
 
     }
 }

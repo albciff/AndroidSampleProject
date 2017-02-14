@@ -1,0 +1,44 @@
+{
+  "levels": [
+    {"question" : "Quin és el nom del dinosaure?",
+      "imageUrl" : "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Carnotaurus.png/220px-Carnotaurus.png",
+      "answers" : [
+        {"text" : "Carnotauro","isCorrect" : true },
+        {"text" : "T-REX","isCorrect" : false },
+        {"text" : "Aran-Saurus","isCorrect" : false }
+      ]
+    },
+    {"question" : "Quants dinosaures hi ha a la imatge?",
+      "imageUrl" : "http://espaciociencia.com/wp-content/uploads/2015/05/dinosaurios-informacion-completa-reportajes-noticias.jpg",
+      "answers" : [
+        {"text" : "Un dinosure","isCorrect" : false },
+        {"text" : "Dotze dinosaures","isCorrect" : true },
+        {"text" : "Una pila","isCorrect" : false }
+      ]
+    },
+    {"question" : "De quin tipus és aquest dinosaure?",
+      "imageUrl" : "http://static.vix.com/es/sites/default/files/styles/large/public/btg/curiosidades.batanga.com/files/10-mitos-sobre-los-dinosaurios-que-debes-conocer-3.jpg?itok=rRGYm6cC",
+      "answers" : [
+        {"text" : "Herbivor","isCorrect" : true },
+        {"text" : "Astronauta","isCorrect" : false },
+        {"text" : "Carnivor","isCorrect" : false }
+      ]
+    },
+    {"question" : "Que significa diplodocus?",
+      "imageUrl" : "http://images.fineartamerica.com/images/artworkimages/mediumlarge/1/mother-diplodocus-dinosaur-walks-corey-ford.jpg",
+      "answers" : [
+        {"text" : "Coll llarg","isCorrect" : false },
+        {"text" : "Força suprema","isCorrect" : false },
+        {"text" : "Doble viga","isCorrect" : true }
+      ]
+    },
+    {"question" : "Que vol dir el \"tri\" de triceratops?",
+      "imageUrl" : "http://vignette2.wikia.nocookie.net/dino/images/f/f6/JW_triceratops.png/revision/latest?cb=20150407211112",
+      "answers" : [
+        {"text" : "Toro","isCorrect" : false },
+        {"text" : "Banya","isCorrect" : false },
+        {"text" : "Tres","isCorrect" : true }
+      ]
+    }
+  ]
+}

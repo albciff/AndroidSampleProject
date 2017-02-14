@@ -21,6 +21,15 @@
     </item>
     <item
         is-multidex="false"
+        jar="C:\Users\Albert\.gradle\caches\modules-2\files-2.1\com.squareup.picasso\picasso\2.5.0\7ff0e000d1e27e356567f56c92af3b8ab912636f\picasso-2.5.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="7ff0e000d1e27e356567f56c92af3b8ab912636f">
+        <dex dex="C:\Users\Albert\AndroidStudioProjects\MainadaQuiz\app\build\intermediates\pre-dexed\debug\picasso-2.5.0_9033cc547d892a3fb0e15937379187aa04418907.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="C:\Users\Albert\AndroidStudioProjects\MainadaQuiz\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.1.1\jars\classes.jar"
         jumboMode="false"
         optimize="true"
@@ -72,6 +81,15 @@
         revision="25.0.2"
         sha1="e2719c102dca3a7a5b02ce07f769362da6ddb4ab">
         <dex dex="C:\Users\Albert\AndroidStudioProjects\MainadaQuiz\app\build\intermediates\pre-dexed\debug\com.android.support-support-fragment-25.1.1_4882899a9b16376c9c6761de3ba7ef0ca84765eb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Albert\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.8.0\c4ba5371a29ac9b2ad6129b1d39ea38750043eff\gson-2.8.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c4ba5371a29ac9b2ad6129b1d39ea38750043eff">
+        <dex dex="C:\Users\Albert\AndroidStudioProjects\MainadaQuiz\app\build\intermediates\pre-dexed\debug\gson-2.8.0_84b48257f66c753b37d546404a6bdcddc9d59e0c.jar" />
     </item>
     <item
         is-multidex="false"
